@@ -1,0 +1,126 @@
+.portfolio-container {
+  margin-top: 15rem;
+
+  h2 {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 10rem;
+  }
+  .more-button-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    .more-button {
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      max-width: 40rem;
+      font-size: 2rem;
+      gap: 2rem;
+      background-color: var(--green);
+      border-radius: 1.4rem;
+      padding: 1.6rem 2.8rem;
+      transition: background-color 0.25s;
+      img {
+        width: 4rem;
+      }
+      a {
+        color: var(--black);
+        font-weight: 500;
+      }
+      &:hover {
+        background-color: var(--pink);
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+    padding: 1rem;
+    overflow: hidden;
+
+    .project {
+      cursor: pointer;
+      padding: 2rem 1.8rem;
+      background-color: #073f56;
+      border-radius: 1.2rem;
+      transition: 0.25s;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      color: #fff;
+      &:hover {
+        transform: translateY(-5px);
+        background-color: var(--pink);
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--blue);
+        margin-bottom: 3.6rem;
+        .project-logo {
+          width: 50px;
+          height: 50px;
+          object-fit: contain;
+        }
+        .project-links {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+        a > img {
+          width: 2.6rem;
+        }
+      }
+      .body {
+        .img-container img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 1.2rem;
+        }
+        h3 {
+          margin-bottom: 2rem;
+        }
+
+        p {
+          letter-spacing: 0.12rem;
+          margin: 2rem 0;
+        }
+      }
+
+      footer {
+        margin-top: auto;
+        .tech-list {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+          font-size: 1.4rem;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 960px) {
+    .projects {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 740px) {
+    .projects {
+      grid-template-columns: 1fr;
+    }
+  }
+}
