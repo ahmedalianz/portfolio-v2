@@ -38,6 +38,9 @@ export function Portfolio() {
   const visitPortfolio = () => {
     window.location.href = "https://ahmedalian.vercel.app/projects";
   };
+  const visitProject = (i: any) => {
+    window.location.href = `https://ahmedalian.vercel.app/projects/${i + 1}`;
+  };
   return (
     <div className="portfolio-container" id="projects">
       <h2>My Projects</h2>
@@ -45,7 +48,7 @@ export function Portfolio() {
       <div className="projects">
         {projects.map((project: any, i: number) => (
           <ScrollAnimation animateIn="flipInX" key={i}>
-            <div className="project">
+            <div className="project" onClick={(i) => visitProject(i)}>
               <header>
                 <img className="project-logo" src={project.logo} alt="" />
                 <div className="project-links">
