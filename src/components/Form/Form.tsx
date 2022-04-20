@@ -2,7 +2,6 @@ import { Container, ContainerSucces } from "./styles";
 import { ToastContainer, toast } from "react-toastify";
 import { useEffect, useState } from "react";
 
-import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "@emailjs/browser";
 import validator from "validator";
 
@@ -10,7 +9,6 @@ export function Form() {
   const [succeeded, setSuccess] = useState("");
 
   const [validEmail, setValidEmail] = useState(false);
-  const [isHuman, setIsHuman] = useState(false);
   const [message, setMessage] = useState("");
 
   function verifyEmail(email: string) {
@@ -89,13 +87,7 @@ export function Form() {
           }}
         />
 
-        <ReCAPTCHA
-          sitekey="6LcAu-IdAAAAAJOTI5E_eRltZNQCvukIl2-f1glQ"
-          onChange={(e) => {
-            setIsHuman(true);
-          }}
-        ></ReCAPTCHA>
-        <button type="submit" disabled={!validEmail || !message || !isHuman}>
+        <button type="submit" disabled={!validEmail || !message}>
           Send
         </button>
       </form>
