@@ -1,11 +1,9 @@
-import { About } from "../About/About";
-import { Contact } from "../Contact/Contact";
-import { Container } from "./styles";
-import { Hero } from "../Hero/Hero";
-import Particles from "react-tsparticles";
-import { Portfolio } from "../Portfolio/Portfolio";
+import "./projects.scss";
 
-export function Main({ projects }: any) {
+import Particles from "react-tsparticles";
+import Project from "./Project";
+
+export default function Projects({ projects }) {
   const techs = [
     "assets/bootstrap-icon.svg",
     "assets/css-icon.svg",
@@ -30,7 +28,7 @@ export function Main({ projects }: any) {
     return { src: tech, width: 20, height: 20 };
   });
   return (
-    <Container>
+    <div className="all-projects-container">
       <Particles
         id="tsparticles"
         options={{
@@ -200,10 +198,10 @@ export function Main({ projects }: any) {
           },
         }}
       />
-      <Hero />
-      <About />
-      <Portfolio projects={projects} />
-      <Contact />
-    </Container>
+      {projects.map((project) => (
+        <Project key={project.id} project={project} />
+      ))}
+      <h1 style={{ textAlign: "center" }}>That's ,All Thank You.</h1>
+    </div>
   );
 }

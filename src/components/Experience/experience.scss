@@ -1,0 +1,43 @@
+.experience-container {
+  .section {
+    .experiences-box {
+      display: flex;
+      width: 95%;
+      margin: 0 auto;
+      .experience {
+        display: flex;
+        margin-bottom: 1rem;
+        flex-direction: column;
+        .time {
+          margin-left: 1.5rem;
+        }
+        .desc {
+          li {
+            display: flex;
+            img {
+              margin-top: 5px;
+              margin-right: 5px;
+              width: 10px;
+              height: 10px;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+    .education-box {
+      display: flex;
+      width: 95%;
+      margin: 0 auto;
+      @media (max-width: 570px) {
+        flex-direction: column;
+      }
+
+      .education {
+        display: flex;
+        margin: 1rem;
+        flex-direction: column;
+      }
+    }
+  }
+}

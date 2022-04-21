@@ -1,4 +1,5 @@
 import { Container } from "./styles";
+import Experience from "components/Experience/Experience";
 import ScrollAnimation from "react-animate-on-scroll";
 
 export function About() {
@@ -65,15 +66,19 @@ export function About() {
             </a>
           </p>
         </ScrollAnimation>
-        <div className="hard-skills">
-          {skills.map((skill, index) => (
-            <div className="hability" key={index}>
-              <ScrollAnimation animateIn="fadeInUp" delay={0.1 * 1000}>
+        <ScrollAnimation animateIn="fadeInLeft" delay={0.6 * 1000}>
+          <Experience />
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="fadeInUp" delay={0.1 * 1000}>
+          <h2>Skills</h2>
+          <div className="hard-skills">
+            {skills.map((skill, index) => (
+              <div className="hability" key={index}>
                 <img src={skill.image} alt={skill.name} />
-              </ScrollAnimation>
-            </div>
-          ))}
-        </div>
+              </div>
+            ))}
+          </div>
+        </ScrollAnimation>
       </div>
       <div className="about-image">
         <ScrollAnimation animateIn="fadeInRight" delay={0.6 * 1000}>

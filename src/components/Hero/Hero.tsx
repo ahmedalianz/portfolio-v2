@@ -1,4 +1,3 @@
-import { BrowserRouter } from "react-router-dom";
 import { Container } from "./styles";
 import { NavHashLink } from "react-router-hash-link";
 import ScrollAnimation from "react-animate-on-scroll";
@@ -24,11 +23,9 @@ export function Hero() {
         </ScrollAnimation>
 
         <ScrollAnimation animateIn="fadeInUp" delay={0.8 * 1000}>
-          <BrowserRouter>
-            <NavHashLink smooth to="#contact" className="button">
-              Contact Me
-            </NavHashLink>
-          </BrowserRouter>
+          <NavHashLink smooth to="#contact" className="button">
+            Contact Me
+          </NavHashLink>
         </ScrollAnimation>
       </div>
       <div className="hero-image">
