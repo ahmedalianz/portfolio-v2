@@ -1,5 +1,8 @@
 .all-projects-container {
   padding: 0 10rem 5%;
+  @media (max-width: 960px) {
+    padding: 0 5rem 5%;
+  }
   .project {
     padding-top: 15%;
     display: flex;
@@ -44,12 +47,17 @@
         line-height: 3rem;
         word-spacing: 0.7rem;
       }
-      .tech {
-        color: white;
-        padding: 8px 10px;
-        margin: 0.5rem;
-        border-radius: 300px;
-        background-color: var(--green);
+      .techs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .tech {
+          color: white;
+          padding: 8px 10px;
+          margin: 0.5rem;
+          border-radius: 300px;
+          background-color: var(--green);
+        }
       }
     }
 
@@ -60,6 +68,9 @@
 
     .hero-slider {
       max-width: 500px;
+      @media (max-width: 960px) {
+        max-width: 800px;
+      }
       .image-gallery-content .image-gallery-slide .image-gallery-image {
         max-height: 300px;
         min-height: 300px;
@@ -81,6 +92,7 @@
       display: block;
       margin-top: 15%;
       .hero-text {
+        text-align: center;
         h1 {
           font-size: 5rem;
         }

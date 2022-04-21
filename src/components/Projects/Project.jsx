@@ -20,9 +20,11 @@ export default function Project({ project }) {
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" delay={0.4 * 1000}>
           <h3>Used Technologies</h3>
-          {project.techs.map((tech) => (
-            <span className="tech">{tech}</span>
-          ))}
+          <div className="techs">
+            {project.techs.map((tech) => (
+              <span className="tech">{tech}</span>
+            ))}
+          </div>
         </ScrollAnimation>
 
         <ScrollAnimation animateIn="fadeInUp" delay={0.5 * 1000}>
