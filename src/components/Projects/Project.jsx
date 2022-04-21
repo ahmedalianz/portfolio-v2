@@ -1,5 +1,4 @@
 import ImageGallery from "react-image-gallery";
-import { NavHashLink } from "react-router-hash-link";
 import ScrollAnimation from "react-animate-on-scroll";
 
 export default function Project({ project }) {
