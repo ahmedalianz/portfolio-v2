@@ -66,7 +66,11 @@ export const Container = styled.section`
   @media (max-width: 960px) {
     display: block;
     text-align: center;
-
+    .about-text {
+      p {
+        font-size: 1.6rem;
+      }
+    }
     .about-image {
       display: flex;
     }
